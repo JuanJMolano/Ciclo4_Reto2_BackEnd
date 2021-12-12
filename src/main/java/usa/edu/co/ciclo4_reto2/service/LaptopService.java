@@ -26,21 +26,16 @@ public class LaptopService {
         return laptopRepository.getLaptop(id);
     }
 
-    //Sacado de la tutoria del profe Cristian, gracias profe :)
     public Laptop create(Laptop laptop) {
 
-        //obtiene el maximo id existente en la coleccion
         Optional<Laptop> laptopLastId = laptopRepository.lastUserId();
 
-        //si el id del Usaurio que se recibe como parametro es nulo, entonces valida el maximo id existente en base de datos
         if (laptop.getId() == null) {
-            //valida el maximo id generado, si no hay ninguno aun el primer id sera 1
+
             if (laptopLastId.isEmpty())
                 laptop.setId(1);
-                //si retorna informacion suma 1 al maximo id existente y lo asigna como el codigo del usuario
             else
                 laptop.setId(laptopLastId.get().getId() + 1);
-
         }
 
         Optional<Laptop> existLaptop = laptopRepository.getLaptop(laptop.getId());
