@@ -26,10 +26,8 @@ public class Ciclo4Reto2Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		userCrudRepository.deleteAll();                                                            //Para que la base de datos se borre por cada ejecución
+		userCrudRepository.deleteAll();
 		laptopCrudRepository.deleteAll();
 		/*orderCrudRepository.deleteAll();*/
 	}
-
-
 }
