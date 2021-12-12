@@ -1,6 +1,7 @@
 package usa.edu.co.ciclo4_reto2.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import usa.edu.co.ciclo4_reto2.model.Order;
 import usa.edu.co.ciclo4_reto2.repository.OrderRepository;
 
@@ -12,8 +13,8 @@ import java.util.Optional;
  * @author Juan Molano
  */
 
+@Service
 public class OrderService {
-
     @Autowired
     private OrderRepository orderRepository;
 
@@ -73,4 +74,5 @@ public class OrderService {
     public List<Order> findByZone(String zona) {
         return orderRepository.findByZone(zona);
     }
+
 }
