@@ -10,6 +10,5 @@ import java.util.Optional;
  */
 
 public interface LaptopCrudRepository extends MongoRepository<Laptop, Integer> {
-    //Para seleccionar el producto con id maximo // Para que en el front el id se cree solo
     Optional<Laptop> findTopByOrderByIdDesc();
 }
