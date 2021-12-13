@@ -31,4 +31,5 @@ public class Order {
 
     private Map<Integer, Laptop> products;
     private Map<Integer, Integer> quantities;
+
 }

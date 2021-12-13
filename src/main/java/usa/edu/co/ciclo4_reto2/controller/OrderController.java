@@ -18,6 +18,7 @@ import java.util.Optional;
 @RequestMapping("/api/order")
 @CrossOrigin("*")
 public class OrderController {
+
     @Autowired
     private OrderService orderService;
 
@@ -53,5 +54,4 @@ public class OrderController {
     public List<Order> findByZone(@PathVariable("zona")String zona){
         return orderService.findByZone(zona);
     }
-
 }
